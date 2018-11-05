@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Black and white cells</title>
     <style>
+        body {
+            margin: 0 auto;
+            height: 1000px;
+
+        }
         td {
             border: 1px solid black;
             width: 15px;
@@ -15,10 +20,6 @@
         table {
             border-collapse: collapse;
         }
-        table:active {
-            background-color: red;
-        }
-
 
         .white {
             background-color: white;
@@ -28,7 +29,13 @@
             background-color: black;
         }
 
+        table.reverse td {
+            background-color: black;
+        }
 
+        table.reverse td.black {
+            background-color: white;
+        }
     </style>
 
 </head>
@@ -42,7 +49,7 @@
 Чтобы поменять цвета всех клеточек сразу, не нужно обходить их в цикле. Если помечать нажатые клетки определенным классом, то перекрасить их все одновременно можно одним действием - поменяв класс на самой таблице.-->
 
     <script>
-        // create table
+      
         let table = document.createElement("table");
         let tbody = document.createElement("tbody");
         let td;
@@ -62,10 +69,6 @@
         }
 
 
-
-
-        //add handler
-
         document.body.addEventListener("click", function (e) {
             if (e.target.className == "white") {
                 e.target.classList.remove("white");
@@ -76,12 +79,11 @@
             };
 
             if (e.target == document.body) {
-           // не получается одним кликом вне таблицы перекрасить клетки в противоположный цвет. Не могу понять, как это можно следать без цикла. 
-
+                table.classList.toggle("reverse")
             }
-
         }, false)
-    </script>
-</body>
 
+    </script>
+
+</body>
 </html>
