@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Black and white cells</title>
+    <style>
+        td {
+            border: 1px solid black;
+            width: 15px;
+            height: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        table:active {
+            background-color: red;
+        }
+
+
+        .white {
+            background-color: white;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <!--Создать поле 30*30 из белых клеточек с помощью элемента <table>.
+При клике на белую клеточку она должна менять цвет на черный. При клике на черную клеточку она должна менять цвет обратно на белый.
+Сама таблица должна быть не вставлена в исходный HTML код, а сгенерирована и добавлена в DOM страницы с помощью Javascript.
+На странице должен быть только один обработчик события click, который будет повешен на всю таблицу. События всплывают от элемента вверх по DOM дереву, их все можно ловить с помощью одного обработчика событий на таблице, и в нем определять, на какую из ячеек нажал пользователь.
+При клике на любое место документа вне таблицы, все цвета клеточек должны поменяться на противоположные (подсказка: нужно поставить Event Listener на <body>).
+Чтобы поменять цвета всех клеточек сразу, не нужно обходить их в цикле. Если помечать нажатые клетки определенным классом, то перекрасить их все одновременно можно одним действием - поменяв класс на самой таблице.-->
+
+    <script>
+        // create table
+        let table = document.createElement("table");
+        let tbody = document.createElement("tbody");
+        let td;
+        let tr;
+        document.body.appendChild(table);
+        table.appendChild(tbody);
+
+        for (let i = 0; i < 30; i++) {
+            tr = document.createElement("tr");
+            tbody.appendChild(tr);
+
+            for (let i = 0; i < 30; i++) {
+                td = document.createElement("td");
+                tr.appendChild(td);
+                td.classList.add("white")
+            }
+        }
+
+
+
+
+        //add handler
+
+        document.body.addEventListener("click", function (e) {
+            if (e.target.className == "white") {
+                e.target.classList.remove("white");
+                e.target.classList.add("black");
+            } else if (e.target.className == "black") {
+                e.target.classList.remove("black");
+                e.target.classList.add("white");
+            };
+
+            if (e.target == document.body) {
+           // не получается одним кликом вне таблицы перекрасить клетки в противоположный цвет. Не могу понять, как это можно следать без цикла. 
+
+            }
+
+        }, false)
+    </script>
+</body>
+
+</html>
