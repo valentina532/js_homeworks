@@ -1,22 +1,26 @@
-@font-face {
+/* @font-face {
    font-family: 'Roboto', sans-serif;
-}
-body, p, span, a {
+} */
+body {
 	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	/* letter-spacing: 1.5px; */
 }
+
 .container {
-    width: 1024px;
-   /* max-width: 1024px;*/
-    margin: 0 auto;
+	max-width: 1024px;
+	/* max-width: 1024px;*/
+	margin: 0 auto;
 
 }
+
 header {
 	background-image: url(../images/bg-cover.png);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	height: 760px;
 }
 
@@ -24,80 +28,110 @@ header {
 	background-color: #f0f2f4;
 	height: 42px;
 }
+
 #top-panel-contacts {
 	float: right;
 	font-size: 15px;
-	margin-bottom: 5px;
+	margin-bottom: 6px;
 }
+
 #top-panel-contacts img {
 	padding-left: 10px;
 }
-#top-panel-contacts #phone, #top-panel-contacts #mail, #top-panel-contacts #fb-icon {
+
+#top-panel-contacts #phone {
 	float: left;
-	padding: 6px 0 0 10px;
+	padding: 5px 4px 0 10px;
 }
+
+#top-panel-contacts #mail {
+	float: left;
+	padding: 7px 15px 0 7px;
+}
+
 #top-panel-contacts #fb-icon {
-	margin: 0 -2px 0 10px;
+	float: left;
+	padding: 1px 3px 2px 5px;
 }
+
 /*#top-panel-contacts #mail, #top-panel-contacts #phone {
 	margin-top: 4px;
 }*/
 #top-panel-contacts #mail span {
-	margin: 0-18px 0 6px;
+	margin: 0 -18px 0 6px;
 }
+
 #top-panel-contacts #phone span {
 	margin: 0 20px 0 10px;
 }
+
 nav {
 	background-color: white;
 	overflow: hidden;
 	width: 100%;
 }
+
 #logo img {
 	float: left;
-	margin: 38px 10px 41px 5px;
+	margin: 41px 8px 41px 0;
 }
+
 #logo-text {
 	padding-top: 30px;
+	line-height: 1.15;
 }
+
 #logo-text p:first-child {
 	font-size: 37px;
-	font-weight: 700;
+	font-weight: 900;
+	margin-top: 3px;
+	margin-bottom: -2px;
+	letter-spacing: 1.5px;
+}
+
+#logo-text p:last-child {
+	font-size: 15px;
 }
 
 #menu {
 	float: right;
+	/* margin-top: 2px; */
 }
+
 #list {
-	
-	margin-top: -39px;
-	margin-right: -16px;
-	
+
+	margin-top: -34px;
+	margin-right: -25px;
+
 }
+
 #list li {
 	float: left;
-	margin-right: 6px;
-	margin-left: 6px;
+	/* margin-right: 6px;
+	margin-left: 6px; */
 	font-size: 15px;
-	padding: 0px 5px 5px 5px;
+	padding: 0px 12px 0px 0px;
 }
 
-#list li > a {
+#list li>a {
 	color: black;
-	font-weight: bold;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 }
-#list li > a:hover {
+
+#list li>a:hover {
 	color: #de2b24;
 }
+
 #list li+li::before {
-    content:' \2022';
-    font-size: 15px;
-    margin-right: 13px;
-    font-weight: bold;
+	content: ' \25CF';
+	font-size: 13px;
+	margin-right: 15px;
+	font-weight: bold;
 }
 
-#list #btn > a {
-	padding: 10px 26px;
+#list #btn>a {
+	padding: 10px 22px 10px 23px;
 	font-size: 15px;
 	font-weight: bold;
 	background-color: #de2b24;
@@ -106,23 +140,29 @@ nav {
 	color: white;
 	text-transform: none;
 	border: none;
+	margin-right: 14px;
 }
+
 #heading1 {
 	text-align: center;
 	color: white;
 	font-size: 48px;
-	font-weight: bold;
-	margin-top: 293px;
-	line-height: 1.15;
+	font-weight: 700;
+	margin-top: 298px;
+	line-height: 1;
+	letter-spacing: 1.5px;
 }
+
 #heading2 {
 	text-align: center;
 	color: white;
-	font-size: 28px;
-	
+	font-size: 30px;
+	font-weight: 200;
+
 }
+
 #heading button {
-	font-size: 24px;
+	font-size: 23.43px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: white;
@@ -130,28 +170,34 @@ nav {
 	border-radius: 5px;
 	position: relative;
 	background-color: #f8cd53;
-	padding: 21px 38px;
+	padding: 21px 40px;
 	top: 29px;
-	left: 351px;
+	left: 345px;
 }
+
 #about {
 	margin: auto;
 	margin-top: 87px;
 	margin-bottom: 148px;
-   	text-align: center;
-   	clear: both;
+	text-align: center;
+	clear: both;
 }
+
 #about #aboutUs1 {
 	padding-top: 5px;
 	color: black;
 	font-size: 36px;
-	font-weight: bold;	
+	font-weight: 900;
+	letter-spacing: 1.5px;
 }
+
 #about #aboutUs2 {
 	color: black;
 	font-size: 20px;
-	
+	font-weight: 200;
+
 }
+
 #about #divider {
 	width: 47px;
 	height: 5px;
@@ -161,34 +207,42 @@ nav {
 	margin-bottom: 46px;
 
 }
+
 .services {
 	float: left;
 	text-align: center;
-	width: 33.333%;
+	width: 33%;
 	padding-bottom: 139px;
-	
+
 }
-.services > img {
-	margin-bottom: 18px;
+
+.services>img {
+	margin-bottom: 20px;
 }
+
 .service-name {
-	padding-bottom: 12px;
+	padding-bottom: 14px;
 	font-size: 22px;
 	font-weight: bold;
+	letter-spacing: 1px;
+	margin-left: 2px;
 
 }
 
 .service-description {
-	font-size: 14px;
-	line-height: 1.5;
-	margin: 0 40px;
+	font-size: 13.5px;
+	line-height: 1.6;
+	margin: -5px 40px 0px 40px;
+	letter-spacing: 0.4px;
 }
+
 #our-works {
 	background-color: #de2b24;
 	height: 869px;
 	clear: both;
 
 }
+
 .works {
 	overflow: hidden;
 	width: 256px;
@@ -198,35 +252,44 @@ nav {
 	border: none;
 	position: relative;
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
+
 .pr-name {
 	color: white;
-	font-size: 28px;
-	font-weight: bold;
-	padding-top: 17px;
+	font-size: 26px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	margin-top: 18px;
 }
+
 .pr-detail {
 	color: white;
-	font-size: 17px;
+	font-size: 15px;
+	letter-spacing: 1.2px;
 }
 
 #works-header {
-   text-align: center;
+	text-align: center;
 }
+
 #works-header1 {
 	padding-top: 102px;
 	color: white;
 	font-size: 36px;
-	font-weight: bold;	
+	font-weight: 700;
+	letter-spacing: 1.5px;
 }
-#works-header2  {
+
+#works-header2 {
 	color: white;
 	font-size: 20px;
-	
+	font-weight: 300;
+
 }
+
 #works-header #divider {
 	width: 47px;
 	height: 5px;
@@ -235,42 +298,50 @@ nav {
 	margin-top: 12px;
 	margin-bottom: 46px;
 }
+
 .works img {
-	
-	
+	padding-top: 3px;
+
+
 }
 
 
 footer {
 	background-color: #2a2a2a;
-	height: 600px;
+	height: 559px;
 	margin: 0 auto;
-	text-align: center;;
+	text-align: center;
+	;
 	overflow: hidden;
 }
 
 footer #footer-heading {
 	font-size: 29px;
-	font-weight: bold;
+	font-weight: 700;
+	letter-spacing: 1px;
 	color: white;
 	padding: 86px 0 16px 0;
 }
+
 footer #footer-heading2 {
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	margin-top: -2px;
+	/* margin-top: -2px; */
 	color: white;
-	padding: 89px 8px 25px 0;
+	padding: 86px 0 24px 0;
 }
+
 #soc {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 60px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-top: 60px;
 }
+
 #soc div {
 	text-align: center;
 	float: left;
-	width: 47px;
+	width: 49px;
 	height: 47px;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -280,46 +351,62 @@ footer #footer-heading2 {
 	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
-	margin: 0 10px 0 12px;
+	margin: 0 11px 0 9px;
 	border-radius: 4px;
 	border: 1px solid white;
 	box-sizing: border-box;
 }
+
 #soc div:hover {
 	border: 2px solid #de2b24;
 }
 
 footer input {
-	width: 656px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200;
+	width: 660px;
 	height: 52px;
 	background-color: #515151;
 	border: none;
 	font-size: 14px;
 	color: #cecece;
 	margin-top: 6px;
+	margin-left: -3px;
 	text-align: left;
 	padding-left: 27px;
 }
+
 footer button {
 	font-size: 17px;
+	font-weight: 700;
 	display: block;
 	margin: auto;
 	background-color: transparent;
 	border: 2px solid #515151;
 	border-radius: 1px;
 	color: white;
-	padding: 14px 37px;
+	padding: 16px 34px;
 	margin-top: 27px;
-	margin-bottom: 86px;
+	margin-bottom: 83px;
 
 }
+
 #copyright {
-	height: 67px;
+	font-family: 'Open Sans', sans-serif;
+	/* height: 67px; */
 	width: 100%;
 	background-color: #515151;
 	position: relative;
-	bottom: 1px;
+	bottom: 3px;
 	font-size: 14px;
 	color: #c0c0c0;
-	padding: 25px 0;
+	padding: 24px 0;
+	text-align: center;
+	letter-spacing: 0.2px;
+
+
+}
+
+#copyright p {
+	margin-right: 14px;
 }
