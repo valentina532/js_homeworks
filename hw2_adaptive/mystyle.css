@@ -191,6 +191,7 @@ table {
 		background-color: #fafafa;
 		display: none;
 		cursor: pointer;
+		z-index: 10;
 
 	}
 
@@ -235,13 +236,18 @@ table {
 		left: 20px;
 		color: white;
 		font-family: 'Lato', sans-serif;
-		font-size: 22px;
 		font-weight: bold;
-		line-height: 2;
+		line-height: 1.5;
+	}
+
+
+	#cover #slogan p {
+		font-size: 16px;
 	}
 
 	#cover #slogan span {
 		color: #a6d6e0;
+		font-size: 14px;
 	}
 
 	#three_images>div {
@@ -399,6 +405,18 @@ table {
 	}
 }
 
+
+@media (min-width: 639px) and (max-width: 979px) {
+	#cover #slogan p {
+		font-size: 36px;
+	}
+
+	#cover #slogan span {
+		font-size: 24px;
+	}
+
+}
+
 @media (min-width: 980px) {
 
 	.fa-bars,
@@ -496,7 +514,15 @@ table {
 	#cover #slogan {
 		top: 100px;
 		left: 40px;
-		font-size: 40px;
+		/* font-size: 40px; */
+	}
+
+	#cover #slogan p {
+		font-size: 54px;
+	}
+
+	#cover #slogan span {
+		font-size: 34px;
 	}
 
 	#bar_menu {
